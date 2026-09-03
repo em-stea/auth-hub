@@ -51,6 +51,6 @@
     "@chakra-ui/cli",
     "@swc/core"
   ]
-},
+  },
   "packageManager": "pnpm@11.1.2"
 }
