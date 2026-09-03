@@ -1,0 +1,47 @@
+{
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "chakra typegen src/shared/styles/theme/index.ts && next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "chakra:typegen": "chakra typegen src/shared/styles/theme/index.ts",
+    "postinstall": "chakra typegen src/shared/styles/theme/index.ts",
+    "typegen": "chakra typegen src/shared/styles/theme/index.ts"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.36.0",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@hookform/resolvers": "^5.9.1",
+    "@simplewebauthn/browser": "9.0.1",
+    "@simplewebauthn/server": "9.0.3",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "next": "16.3.2",
+    "next-auth": "5.0.0-beta.32",
+    "prettier": "^3.5.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.86.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^3.36.1",
+    "@next/eslint-plugin-next": "^16.1.5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "16.1.4",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5",
+    "typescript-eslint": "^8.54.0"
+  },
+  "packageManager": "pnpm@11.1.2"
+}
