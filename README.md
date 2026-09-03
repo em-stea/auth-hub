@@ -1,6 +1,8 @@
 # Auth Hub
 
-<img width="1423" height="793" alt="image" src="https://github.com/user-attachments/assets/b99b6558-7790-4851-902e-7ad47319bd50" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b99b6558-7790-4851-902e-7ad47319bd50" alt="Auth Hub Preview" width="550" style="border-radius: 8px;" />
+</p>
 
 
 
