@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/auth-hub",
   reactCompiler: true,
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
