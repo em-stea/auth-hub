@@ -2,7 +2,7 @@
 
 Authentication app built with Next.js. Includes credentials login and social providers (Google and GitHub).
 
-**Site:** [http://localhost:3000](http://localhost:3000)
+**Site:** [[http://localhost:3000](https://em-stea.github.io/auth-hub/)]([http://localhost:3000](https://em-stea.github.io/auth-hub/))
 
 ## Technologies
 
