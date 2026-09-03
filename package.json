@@ -43,11 +43,14 @@
     "typescript": "^5",
     "typescript-eslint": "^8.54.0"
   },
-  
+
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
+  "onlyBuiltDependencies": [
+    "esbuild",
+    "unrs-resolver",
+    "@chakra-ui/cli",
+    "@swc/core"
+  ]
+},
   "packageManager": "pnpm@11.1.2"
 }
