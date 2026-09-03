@@ -45,12 +45,12 @@
   },
 
   "pnpm": {
-  "onlyBuiltDependencies": [
-    "esbuild",
-    "unrs-resolver",
-    "@chakra-ui/cli",
-    "@swc/core"
-  ]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "unrs-resolver",
+      "@chakra-ui/cli",
+      "@swc/core"
+    ]
   },
   "packageManager": "pnpm@11.1.2"
 }
