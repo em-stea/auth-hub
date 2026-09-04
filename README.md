@@ -1,5 +1,9 @@
 # Auth Hub
 
+<img width="1435" height="802" alt="Screenshot 2026-09-03 at 20 42 36" src="https://github.com/user-attachments/assets/3702d850-8a0d-4f0c-80d1-acbc5217d0f4" />
+
+
+
 Authentication app built with Next.js. Includes credentials login and social providers (Google and GitHub).
 
 **Site:** [https://auth-hub.vercel.app](https://auth-hub.vercel.app)
