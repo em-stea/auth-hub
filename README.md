@@ -6,9 +6,8 @@
 
 Authentication app built with Next.js. Includes credentials login and social providers (Google and GitHub).
 
-**Site:** [https://auth-hub.vercel.app](https://auth-hub.vercel.app)
+**Site:** [[https://auth-hub.vercel.app](https://auth-hub-testing-team13.vercel.app/auth/login)]([https://auth-hub.vercel.app](https://auth-hub-testing-team13.vercel.app/auth/login))
 
-**Local:** [http://localhost:3000](http://localhost:3000)
 
 ## Technologies
 
