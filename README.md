@@ -63,6 +63,24 @@ Copy `.env.example` and set:
 
 Do not commit your real `.env`.
 
+### Gmail SMTP (App Password)
+
+Gmail does not allow your normal account password for SMTP. Create an [App Password](https://myaccount.google.com/apppasswords) instead:
+
+1. Open [Google Account → Security](https://myaccount.google.com/security).
+2. Turn on **2-Step Verification** (required before App Passwords appear).
+3. Go to [App passwords](https://myaccount.google.com/apppasswords) (or search “App passwords” in your Google Account).
+4. Create a password — app: **Mail**, device: **Other** (e.g. `Auth Hub`).
+5. Copy the 16-character password and set it in `.env`:
+
+```env
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=xxxx xxxx xxxx xxxx
+SMTP_FROM="Auth Hub <your-email@gmail.com>"
+```
+
+Spaces in the App Password are fine; Nodemailer accepts them as-is.
+
 ## Authentication
 
 | Method              | Notes                                              |

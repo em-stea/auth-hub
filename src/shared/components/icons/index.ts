@@ -4,5 +4,6 @@ export { CheckCircleFilledIcon } from "./other/check-circle-filled";
 export { CrossCircleFilledIcon } from "./other/cross-circle-filled";
 export { CrossIcon } from "./other/cross-icon";
 export { RayIcon } from "./other/ray";
+export { KeyIcon } from "./other/key";
 export { GoogleIcon } from "./social/google";
 export { GithubIcon } from "./social/github";

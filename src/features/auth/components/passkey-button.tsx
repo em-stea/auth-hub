@@ -1,10 +1,11 @@
 "use client";
 
-import { Button, ButtonProps, Text } from "@chakra-ui/react";
+import { Button, ButtonProps, Icon, Text } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
 import { signIn } from "next-auth/webauthn";
 import { useState } from "react";
 
+import { KeyIcon } from "@/shared/components/icons";
 import { toaster } from "@/shared/components/toaster/toaster";
 
 interface PasskeyButtonProps {
@@ -56,6 +57,7 @@ export const PasskeyButton = ({
         }
       }}
     >
+      <Icon as={KeyIcon} />
       <Text textStyle="button.3">{label}</Text>
     </Button>
   );
