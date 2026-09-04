@@ -1,6 +1,7 @@
-# Auth Hub
+# Next Auth Flow
 
-<img width="1435" height="802" alt="Auth Hub login" src="https://github.com/user-attachments/assets/3702d850-8a0d-4f0c-80d1-acbc5217d0f4" />
+<img width="1397" height="824" alt="Screenshot 2026-09-04 at 17 27 07" src="https://github.com/user-attachments/assets/7c1314cf-e388-4197-b037-6418ab7860b6" />
+
 
 Authentication hub built with Next.js — credentials, OAuth, passkeys, and password recovery.
 
