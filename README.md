@@ -4,7 +4,7 @@
 
 Authentication hub built with Next.js — credentials, OAuth, passkeys, and password recovery.
 
-[Live demo](https://auth-nm702qmf8-testing-team13.vercel.app/auth/login)
+<a href="https://auth-nm702qmf8-testing-team13.vercel.app/auth/login" target="_blank" rel="noopener noreferrer">Live demo</a>
 
 ## Features
 
