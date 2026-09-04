@@ -2,7 +2,6 @@
 
 <img width="1397" height="824" alt="Screenshot 2026-09-04 at 17 27 07" src="https://github.com/user-attachments/assets/7c1314cf-e388-4197-b037-6418ab7860b6" />
 
-
 Authentication hub built with Next.js — credentials, OAuth, passkeys, and password recovery.
 
 <a href="https://auth-nm702qmf8-testing-team13.vercel.app/auth/login" target="_blank" rel="noopener noreferrer">Live demo</a>
