@@ -1,28 +1,37 @@
 # Auth Hub
 
-<img width="1435" height="802" alt="Screenshot 2026-09-03 at 20 42 36" src="https://github.com/user-attachments/assets/3702d850-8a0d-4f0c-80d1-acbc5217d0f4" />
+<img width="1435" height="802" alt="Auth Hub login" src="https://github.com/user-attachments/assets/3702d850-8a0d-4f0c-80d1-acbc5217d0f4" />
 
+Authentication hub built with Next.js — credentials, OAuth, passkeys, and password recovery.
 
+[Live demo](https://auth-hub.vercel.app)
 
-Authentication app built with Next.js. Includes credentials login and social providers (Google and GitHub).
+## Features
 
-**Site:** [[https://auth-hub.vercel.app](https://auth-hub-testing-team13.vercel.app/auth/login)]([https://auth-hub.vercel.app](https://auth-hub-testing-team13.vercel.app/auth/login))
-
+- **Credentials login** — email/password with bcrypt hashing
+- **Sign up** — create accounts with validated forms (Zod + React Hook Form)
+- **Google & GitHub OAuth** — social sign-in with account linking by email
+- **Passkeys (WebAuthn)** — register and sign in without a password
+- **Password recovery** — forgot/reset flow via Gmail SMTP (Nodemailer)
+- **Protected home** — session-aware UI with sign-out and passkey setup prompts
+- **Prisma + Supabase Postgres** — Auth.js adapter with migrations and seed user
 
 ## Technologies
 
 | Technology | Purpose |
 | --- | --- |
-| **Next.js 16** | React framework (App Router) |
-| **React 19** | UI and components |
+| **Next.js 16** | App Router framework |
+| **React 19** | UI |
 | **TypeScript** | Static typing |
-| **Auth.js (NextAuth v5)** | Authentication with JWT, Credentials, Google, and GitHub |
-| **Chakra UI v3** | Design system and components |
-| **Emotion** | Styling (cache + React) |
-| **React Hook Form** | Controlled forms |
-| **Zod** | Schema validation |
-| **@hookform/resolvers** | Zod + React Hook Form integration |
-| **SimpleWebAuthn** | WebAuthn / passkeys support |
+| **Auth.js (NextAuth v5)** | Auth (JWT, Credentials, Google, GitHub, Passkey) |
+| **Prisma** | ORM + Auth.js adapter |
+| **Supabase** | Postgres database |
+| **Chakra UI v3** | Design system |
+| **Emotion** | CSS-in-JS |
+| **React Hook Form + Zod** | Forms and validation |
+| **SimpleWebAuthn** | Passkeys / WebAuthn |
+| **bcryptjs** | Password hashing |
+| **Nodemailer** | Password-reset emails |
 | **pnpm** | Package manager |
 | **ESLint + Prettier** | Linting and formatting |
 | **React Compiler** | Render optimization |
@@ -32,29 +41,47 @@ Authentication app built with Next.js. Includes credentials login and social pro
 ```bash
 cp .env.example .env
 pnpm install
+pnpm prisma:migrate
 pnpm dev
 ```
 
-Copy `.env.example` to `.env` and fill in any missing values (especially `AUTH_SECRET` and OAuth credentials if you want Google/GitHub login).
+Fill in `.env` before starting (see below). The app runs at [http://localhost:3000](http://localhost:3000).
 
-The app is available at [http://localhost:3000](http://localhost:3000).
+## Environment variables
+
+Copy `.env.example` and set:
+
+| Variable | Description |
+| --- | --- |
+| `AUTH_URL` | App URL (`http://localhost:3000` locally) |
+| `AUTH_SECRET` | Auth.js secret |
+| `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` | Google OAuth (optional) |
+| `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` | GitHub OAuth (optional) |
+| `SMTP_USER` / `SMTP_PASSWORD` / `SMTP_FROM` | Gmail SMTP for password reset |
+| `DATABASE_URL` | Supabase pooler URL (runtime, port 6543) |
+| `DIRECT_URL` | Supabase URL for Prisma migrations (port 5432) |
+
+Do not commit your real `.env`.
+
+## Authentication
+
+| Method | Notes |
+| --- | --- |
+| **Credentials** | Seeded user: `admin@test.com` / `123456` |
+| **Google** | Requires Google OAuth env vars |
+| **GitHub** | Requires GitHub OAuth env vars |
+| **Passkey** | Register after login or from `/auth/setup-passkey` |
+| **Forgot password** | Sends a reset link (expires in 1 hour) |
 
 ## Scripts
 
 | Command | Description |
 | --- | --- |
-| `pnpm dev` | Generates Chakra types and starts the development server |
+| `pnpm dev` | Chakra typegen + Next.js dev server |
 | `pnpm build` | Production build |
-| `pnpm start` | Serves the production build |
-| `pnpm lint` | Runs ESLint |
-| `pnpm typegen` | Generates Chakra theme types |
-
-## Authentication
-
-- **Credentials** (seeded user from `prisma/seed.cjs`):
-  - Email: `admin@test.com`
-  - Password: `123456`
-- **Google OAuth** — set `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` in `.env`
-- **GitHub OAuth** — set `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` in `.env`
-
-See `.env.example` for the full list of variables. Do not commit your real `.env`.
+| `pnpm start` | Serve production build |
+| `pnpm lint` | ESLint |
+| `pnpm typegen` | Generate Chakra theme types |
+| `pnpm prisma:generate` | Generate Prisma Client |
+| `pnpm prisma:migrate` | Run migrations |
+| `pnpm prisma:studio` | Open Prisma Studio |
