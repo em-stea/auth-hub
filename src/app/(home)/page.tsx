@@ -1,5 +1,7 @@
 import { Card, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Suspense } from "react";
 
+import { AddPasskeyButton } from "@/features/auth/components/add-passkey-button";
 import { SignOutButton } from "@/features/home/components/sign-out-button";
 
 const PLACEHOLDER_IMAGES = [
@@ -11,7 +13,11 @@ const PLACEHOLDER_IMAGES = [
 export default function Home() {
   return (
     <>
-      <Flex justifyContent="flex-end" mb="6">
+      <Suspense fallback={null}>
+        <AddPasskeyButton />
+      </Suspense>
+
+      <Flex justifyContent="flex-end" mb="6" gap="3" alignItems="center">
         <SignOutButton />
       </Flex>
 

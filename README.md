@@ -52,7 +52,7 @@ The app is available at [http://localhost:3000](http://localhost:3000).
 
 ## Authentication
 
-- **Credentials** (demo defaults from `.env.example`):
+- **Credentials** (seeded user from `prisma/seed.cjs`):
   - Email: `admin@test.com`
   - Password: `123456`
 - **Google OAuth** — set `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` in `.env`

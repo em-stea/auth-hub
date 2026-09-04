@@ -9,19 +9,27 @@
     "lint": "eslint",
     "chakra:typegen": "chakra typegen src/shared/styles/theme/index.ts",
     "postinstall": "chakra typegen src/shared/styles/theme/index.ts",
-    "typegen": "chakra typegen src/shared/styles/theme/index.ts"
+    "typegen": "chakra typegen src/shared/styles/theme/index.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.3",
     "@chakra-ui/react": "^3.36.0",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@hookform/resolvers": "^5.9.1",
+    "@prisma/client": "^6.19.3",
     "@simplewebauthn/browser": "9.0.1",
     "@simplewebauthn/server": "9.0.3",
+    "@uidotdev/usehooks": "^2.4.1",
+    "bcryptjs": "^3.0.3",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "next": "16.3.2",
     "next-auth": "5.0.0-beta.32",
+    "nodemailer": "^9.1.1",
     "prettier": "^3.5.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -32,6 +40,7 @@
     "@chakra-ui/cli": "^3.36.1",
     "@next/eslint-plugin-next": "^16.1.5",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "^1.0.0",
@@ -40,8 +49,12 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "prettier": "^3.5.3",
+    "prisma": "6.19.3",
     "typescript": "^5",
     "typescript-eslint": "^8.54.0"
   },
-  "packageManager": "pnpm@11.1.2"
+  "packageManager": "pnpm@11.1.2",
+  "prisma": {
+    "seed": "node prisma/seed.cjs"
+  }
 }

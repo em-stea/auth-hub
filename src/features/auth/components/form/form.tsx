@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, BoxProps, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { createContext, ElementType, useCallback, useContext, useEffect, useRef } from "react";
 import { FieldValues, FormProvider, UseFormReturn } from "react-hook-form";
 

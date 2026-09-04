@@ -8,7 +8,7 @@ export function SignOutButton() {
     <Button
       variant="primary"
       size="md"
-      onClick={() => signOut({ callbackUrl: "/api/auth/signin" })}
+      onClick={() => signOut({ callbackUrl: "/auth/login" })}
     >
       Sign out
     </Button>
